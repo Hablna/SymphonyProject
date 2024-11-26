@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+    <h1>bienvenue</h1>
+    <div class="row">
+        {% for image in images %}
+           {% include( "home/_chaton.html.twig") %}
+        {% endfor %}
+    </div>
+    <h2>Ajouter un dossier: </h2>
+    {{ form (formulaire) }}
+{% endblock %}
